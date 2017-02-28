@@ -1,0 +1,14 @@
+
+.demo-card-wide.mdl-card {
+  width: 1100px;
+  margin-left: 10%;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: black;
+}
+#video{
+
+	height: 150px;
+	margin-left: 25%;
+}
