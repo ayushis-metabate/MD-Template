@@ -21,8 +21,8 @@
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="material-wfont.min.css">
   <link rel="stylesheet" type="text/css" href="flipper.css">
-  <!-- <script type="text/javascript" src="jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="bootstrap.min.js"></script> -->
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="bootstrap.min.js"></script>
  </head>
 
 <body>
@@ -30,12 +30,40 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-    
+    <span class="mdl-layout-title"><img class="img-fluid" src="images/metabate2.png" id="logo"></span> 
+    <nav class="navbar" id="navig">
+    <div class="container-fluid" id="fld">
+      <div class="navbar-header" id="header">
+        <button type="button" style="z-index: 9999;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Click Here</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+       <div id="navbar" class="navbar-collapse collapse" >
+       <ul class="nav navbar-nav" id="down">
+      <li><a href="#page-top" style="color: black; font-size: 16px;">Home</a></li>
+
+       <li><a href="#about" style="color: black; font-size: 16px;">About Us</a></li>
+
+       <li><a href="#service" style="color: black; font-size: 16px;">Services</a></li>
+
+       <li><a href="#project" style="color: black; font-size: 16px;">Portfolio</a></li>
+
+       <li><a href="#client" style="color: black; font-size: 16px;">Blog</a></li>
+
+       <li><a href="#contact" style="color: black; font-size: 16px;">Contact Us</a></li> 
+       </ul>
+       </div>
+</div>
+  
+</nav>
       <!-- Title -->
-   <span class="mdl-layout-title"><img class="img-fluid" src="images/metabate2.png" id="logo"></span>
+    <!-- <span class="mdl-layout-title"><img class="img-fluid" src="images/metabate2.png" id="logo"></span>  -->
   </header> 
  
-    <div class="mdl-layout__drawer">
+    <!-- <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="" style="text-decoration: none;"><i class="zmdi zmdi-home"></i>Home</font></a>
@@ -45,20 +73,34 @@
       <a class="mdl-navigation__link" href="" style="text-decoration: none;"><i class="zmdi zmdi-comments"></i>  Blog</a>
       <a class="mdl-navigation__link" href="" style="text-decoration: none;"><i class="zmdi zmdi-phone"></i>  Contact Us</a>
     </nav>
-  </div>  
+  </div>   -->
    </div> 
 <br>
-
-  <section>
+  <section id="page-top">
  <div class="demo-card-wide mdl-card mdl-shadow--6dp" id="first_card">
-  <div class="mdl-card__title">
+   <div class="mdl-card__title">
    <img src="images/1920x1200-3.png" height="100%" width="100%">
-  <h3 class="mdl-card__title-text" align="center" id="main_cont">We Build Successful Digital Stories <br>For Web & Mobile</h3>  </div>
+  <h3 class="mdl-card__title-text" align="center" id="main_cont">
+  	<div class="mySlides">
+    <p class="slide">We Build Successful Digital Stories <br> For Web & Mobile</p>
+  </div>
+
+  <div class="mySlides">
+      <p class="slide">Content of second slide is here.</p>
+
+  </div>
+  <div class="mySlides">
+   <p class="slide">Content of third slide is here.</p>
+    
+  </div>
+  </h3>
+
+    </div>
   <div class="btn1">
      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">
             <i class="zmdi zmdi-chevron-down"></i>
 </button>
-</div>
+</div> 
 </div>
 </section>
 
@@ -430,6 +472,22 @@
 <script type="text/javascript" src="ie10-viewport-bug-workaround.js"></script>
 <script>
   $('body').bootstrapMaterialDesign();
+</script>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); 
+}
 </script>
 </body>
 </html>
